@@ -1,10 +1,10 @@
-def max_subarray(graph):
-    local_max = max = 0
+def max_subarray(graph=[]):
+    local_max = gmax = 0
 
     for x in graph:
         local_max = max(0, local_max + x)
-        max = max(max, local_max)
+        gmax = max(gmax, local_max)
 
-    return max
+    return gmax
 
 # O(n), dynamic programming
